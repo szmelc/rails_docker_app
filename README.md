@@ -1,24 +1,9 @@
-# README
+# Sample Rails Docker App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. run `docker-compose up --build`
 
-Things you may want to cover:
+2. reset the database `docker-compose exec --user "$(id -u):$(id -g)" website rails db:reset`
 
-* Ruby version
+3. run the migrations `docker-compose exec --user "$(id -u):$(id -g)" website rails db:migrate`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3. visit `localhost:3000`
